@@ -240,6 +240,8 @@ get '/things/:id/edit' do
         redirect to "/login"
       end
   end
+	
+	Square brackets also are still just accessing elements inside of a hash because `params` and `session` both are hashes.
 
 
 *Curly Braces *
