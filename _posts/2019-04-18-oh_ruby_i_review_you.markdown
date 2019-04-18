@@ -5,7 +5,7 @@ date:       2019-04-18 01:38:07 -0400
 permalink:  oh_ruby_i_review_you
 ---
 
-![](https://i.imgur.com/FvMuQons.jpghttp://)
+![](https://i.imgur.com/FvMuQons.jpg)
 
 **Class and Instance Methods**
      
@@ -15,7 +15,7 @@ Ruby is made up of objects. Methods allow objects to function and return values.
  When creating a class method, the self keyword is needed; this is how we know we are defining a class method. 
 	This is a class method example from the user model of my Sinatra App portfolio project:
 
-			def self.username_check(username)
+		  def self.username_check(username)
           self.all.detect do |user|
           user.username == username
        end
