@@ -54,9 +54,9 @@ class Classroom
 		 end
 	end
 ```
+________________________________________________________________________________________________________
 
-
-**Helper Methods. ** are another type of method and are created to reduce the writing of excess code. They "help" us by providing shortcuts. Helper methods are written in the controller and are accessible in the views. You can also create a separate helper file in the directory and place your helper class methods there.  Here is an example of helper methods from my Sinatra App portfolio project from the application controller:
+Helper Methods.  are another type of method and are created to reduce the writing of excess code. They "help" us by providing shortcuts. Helper methods are written in the controller and are accessible in the views. You can also create a separate helper file in the directory and place your helper class methods there.  Here is an example of helper methods from my Sinatra App portfolio project from the application controller:
 
 
 
