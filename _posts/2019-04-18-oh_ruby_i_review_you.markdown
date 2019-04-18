@@ -1,11 +1,11 @@
 ---
 layout: post
 title:      " Oh, Ruby, I Review You"
-date:       2019-04-18 05:38:07 +0000
+date:       2019-04-18 01:38:07 -0400
 permalink:  oh_ruby_i_review_you
 ---
 
-
+![](https://i.imgur.com/FvMuQons.jpghttp://)
 
 **Class and Instance Methods**
      
