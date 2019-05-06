@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Review and Portfolio Project "
-date:       2019-05-06 19:20:37 +0000
+date:       2019-05-06 15:20:38 -0400
 permalink:  rails_review_and_portfolio_project
 ---
 
@@ -24,18 +24,18 @@ Using Rails developing techniques such as “**DRY - Don’t Repeat Yourself** �
 
 I copied and pasted this rails file structure overview from the Flatiron rails intro just because it is perfectly written for review:
 
-**app** – contains the models, views, and controllers, along with the the rest of the core functionality of the application. This is the one directory where you can make a change and not have to restart the Rails server. The majority of your time will be spent working in this directory. In addition to the full MVC structure, this directory also contains non Ruby files, such as: css files, javascripts, images, fonts, etc. 
-**bin** – some built-in Rails tasks that you most likely will never have to work with. 
-**config** – the config directory manages a number of settings that control the default behavior, including: the environment settings, a set of modules that are initialized when the application starts, the ability to set language values, the application settings, the database settings, the application routes, and lastly the secret key base. 
-**database (db)** – within the db directory you will find the database schema file that lists the database tables, their columns, and each column’s associated data type. The db directory also contains the seeds.rb file, which lets you create some data that can be utilized in the application. This is a great way to quickly integrate data in the application without having to manually add records through a web form element. The schema file can be found at db/schema.rb. 
-** lib** – while many developers could build full applications without ever entering the lib directory, you will discover that it can be incredibly helpful. The lib/tasks directory is where custom rake tasks are created. You have already used a built-in rake task when you ran the database creation and migration tasks; however, creating custom rake tasks can be very helpful and sometimes necessary. For example, a custom rake task that runs in the background, making calls to an external API and syncing the returned data into the application’s database. 
-** log** – within the log directory you will discover the application logs. This can be helpful for debugging purposes, but for a production application it's often better to use an outside service since they can offer more advanced services like querying and alerts. 
-**public** – this directory contains some of the custom error pages, such as 404 errors, along with the robots.txt file which will let developers control how search engines index the application on the web. 
-**test** – by default Rails will install the test suite in this directory. This is where all of your specs, factories, test helpers, and test configuration files can be found. Side note: We always use RSpec, which means this directory will actually be called spec. 
-**tmp** – this is where the temporary items are stored and is rarely accessed by developers. 
-**vendor** – this directory has been utilized for varying purposes in the past. In Rails 4+, its main purpose is for integrating Client-side MVC frameworks, such as AngularJS. 
-**Gemfile** – the Gemfile contains all of the gems that are included in the application; this is where you will place outside libraries that are utilized in the application. After any change to the Gemfile, you will need to run bundle. This will call in all of the code dependencies in the application. The Gem process can seem like a mystery to new developers, but it is important to realize that the Gems that are brought into an application are simply Ruby files that help extend the functionality of the app. 
-**Gemfile.lock** – this file should not be edited. It displays all of the dependencies that each of the Gems contain along with their associated versions. Messing around with the lock file can lead to application bugs due to missing or altered Gem dependencies. 
+**app** – contains the models, views, and controllers, along with the the rest of the core functionality of the application. This is the one directory where you can make a change and not have to restart the Rails server. The majority of your time will be spent working in this directory. In addition to the full MVC structure, this directory also contains non Ruby files, such as: css files, javascripts, images, fonts, etc.&#x2028;
+**bin** – some built-in Rails tasks that you most likely will never have to work with.&#x2028;
+**config** – the config directory manages a number of settings that control the default behavior, including: the environment settings, a set of modules that are initialized when the application starts, the ability to set language values, the application settings, the database settings, the application routes, and lastly the secret key base.&#x2028;
+**database (db)** – within the db directory you will find the database schema file that lists the database tables, their columns, and each column’s associated data type. The db directory also contains the seeds.rb file, which lets you create some data that can be utilized in the application. This is a great way to quickly integrate data in the application without having to manually add records through a web form element. The schema file can be found at db/schema.rb.&#x2028;
+** lib** – while many developers could build full applications without ever entering the lib directory, you will discover that it can be incredibly helpful. The lib/tasks directory is where custom rake tasks are created. You have already used a built-in rake task when you ran the database creation and migration tasks; however, creating custom rake tasks can be very helpful and sometimes necessary. For example, a custom rake task that runs in the background, making calls to an external API and syncing the returned data into the application’s database.&#x2028;
+** log** – within the log directory you will discover the application logs. This can be helpful for debugging purposes, but for a production application it's often better to use an outside service since they can offer more advanced services like querying and alerts.&#x2028;
+**public** – this directory contains some of the custom error pages, such as 404 errors, along with the robots.txt file which will let developers control how search engines index the application on the web.&#x2028;
+**test** – by default Rails will install the test suite in this directory. This is where all of your specs, factories, test helpers, and test configuration files can be found. Side note: We always use RSpec, which means this directory will actually be called spec.&#x2028;
+**tmp** – this is where the temporary items are stored and is rarely accessed by developers.&#x2028;
+**vendor** – this directory has been utilized for varying purposes in the past. In Rails 4+, its main purpose is for integrating Client-side MVC frameworks, such as AngularJS.&#x2028;
+**Gemfile** – the Gemfile contains all of the gems that are included in the application; this is where you will place outside libraries that are utilized in the application. After any change to the Gemfile, you will need to run bundle. This will call in all of the code dependencies in the application. The Gem process can seem like a mystery to new developers, but it is important to realize that the Gems that are brought into an application are simply Ruby files that help extend the functionality of the app.&#x2028;
+**Gemfile.lock** – this file should not be edited. It displays all of the dependencies that each of the Gems contain along with their associated versions. Messing around with the lock file can lead to application bugs due to missing or altered Gem dependencies.&#x2028;
 **README.rdoc** – the readme file is an important place to document the details of the application. If the application is an open-source project, this is where you can place instructions to other developers, such as how to get the app up and running locally.
 
 **MVC** stands for Model, View, and Controller.
@@ -98,16 +98,16 @@ In Rails, a RESTful route provides a mapping between HTTP verbs, controller ac
 From Flatiron : 
 
 Below are a few keys to remember when thinking about REST:
-**REST** is an architectural design pattern, not a framework or code in itself. Many other web frameworks utilize RESTful design principles in some form or another. By using RESTful principles, Rails apps are able to have a clear and standardized naming structure for routes and actions. 
-**RESTful routes** have a clear mapping between the URL resource and the corresponding controller actions. 
-There are seven potential RESTful route options available. 
+**REST** is an architectural design pattern, not a framework or code in itself. Many other web frameworks utilize RESTful design principles in some form or another. By using RESTful principles, Rails apps are able to have a clear and standardized naming structure for routes and actions.&#x2028;
+**RESTful routes** have a clear mapping between the URL resource and the corresponding controller actions.&#x2028;
+There are seven potential RESTful route options available.&#x2028;
 
 Recap of form_tag
 To review, the **form_tag helper method** allows us to automatically generate HTML form code and integrate data to both auto fill the values as well as have the form submit data that the controller can use to either create or update a record in the database. It allows for you to pass in: the route for where the parameters for the form will be sent, the HTTP method that the form will utilize, and the attributes for each field.
 
 A good rule of thumb for when to use one approach over the other is below:
-Use **form_for** when your form is directly connected to a model. Extending our example from the introduction, this would be our Hamster's profile edit form that connects to the profile database table. This is the most common case when form_for is used 
-Use **form_tag** when you simply need an HTML form generated. Examples of this would be: a search form field or a contact form 
+Use **form_for** when your form is directly connected to a model. Extending our example from the introduction, this would be our Hamster's profile edit form that connects to the profile database table. This is the most common case when form_for is used&#x2028;
+Use **form_tag** when you simply need an HTML form generated. Examples of this would be: a search form field or a contact form&#x2028;
 -------------------------------------------------------
 
 Now, that we have reviewed some, I want to talk a bit about my rails portfolio project.
