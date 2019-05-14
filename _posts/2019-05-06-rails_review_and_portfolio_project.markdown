@@ -21,6 +21,8 @@ The **MVC Framework** continues in rails, however, now we can **generate** the f
 
 Using Rails developing techniques such as “**DRY - Don’t Repeat Yourself** “and “**Convention Over Configuration**” (default set of conventions used in rails) allows developers to keep their overall work cleaner and less prone to unneeded, repetitive code and errors and bugs and allows for trouble shooting to be much easier. 
 
+**klass** - is commonly used to name a variable that holds a Class object (remember classes are objects too), as in klass = String .
+
 
 I copied and pasted this rails file structure overview from the Flatiron rails intro just because it is perfectly written for review:<br>
 
@@ -109,7 +111,7 @@ A good rule of thumb for when to use one approach over the other is below:
 Use **form_for** when your form is directly connected to a model. Extending our example from the introduction, this would be our Hamster's profile edit form that connects to the profile database table. This is the most common case when form_for is used<br>
 Use **form_tag** when you simply need an HTML form generated. Examples of this would be: a search form field or a contact form<br>
 
-**klass**   is commonly used to name a variable that holds a Class object (remember classes are objects too), as in klass = String .
+
 
 
 -------------------------------------------------------
