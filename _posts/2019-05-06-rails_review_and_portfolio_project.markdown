@@ -65,7 +65,7 @@ The **controller** packs the response and sends it back to the client<br>
 The **view** (on the originating client's machine) presents the data for the user<br>
 
 
-I found this amazing rails glossary[ http://docs.railsbridge.org/intro-to-rails/glossary] .    <br>
+I found this amazing rails glossary.   <a href="http://docs.railsbridge.org/intro-to-rails/glossary">here</a> <br>
 
 Some of the command line terms that are most helpful in rails include :<br>
 
@@ -87,13 +87,13 @@ How does your application know what view to render to users? This is where routi
 **Dynamic route** - Dynamic routes are pages that accept parameters and render different content based on those parameters. An example would be a blog's post page that contains a specific article.<br>
 
 I found this page with really great HTTP verbs and methods for RESTful routes
-[https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods]
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">here</a>
 
 And this page for rails routing :
-[https://guides.rubyonrails.org/v5.2/routing.html]
+<a href="https://guides.rubyonrails.org/v5.2/routing.html">here</a>
 
 In Rails, a RESTful route provides a mapping between HTTP verbs, controller actions, and (implicitly) CRUD operations in a database.
-[https://guides.rubyonrails.org/v2.3.11/routing.html]  
+ <a href="https://guides.rubyonrails.org/v2.3.11/routing.html">here</a>
 
 From Flatiron : 
 <br>
@@ -114,8 +114,8 @@ Now, that we have reviewed some, I want to talk a bit about my rails portfolio p
 
 I took the suggested task generator idea and instead, decided to create a party planning app. I called it the BabyGuide for generating ideas and requests from individuals and a group to create a birthday party for a baby or child. The app works for any group party planner, however, and doesn't have to only relate to children's parties. It would work perfectly for a group of friends who wish to plan a bachelorette party, or surprise party or highschool reunion. It could also be a great app for families planning anniversary parties or family reunions. The idea is that a person can be the admin and create a checklist with party planning requests. Then he or she can invite his/her friends and family to create accounts and accept requests and also to create their own party plans and requests. Then each person can update the request status to say that it is finished. Some checklist examples include: Food menu, decorations, gift ideas etc. Then the checklist of food menu, for example, has a list of requests of food items: burgers, buns, hotdogs, salad, drinks, cups, etc. Each of those requests are then assigned to individuals who can choose to accept them or not. Once they are accepted, they can be updated saying that item is finished. 
 
-You can see a walkthrough of my project on youtube : [https://www.youtube.com/watch?v=NElvtYR_eBY&t=38s]
+You can see a walkthrough of my project on youtube : <a href="https://www.youtube.com/watch?v=NElvtYR_eBY&t=38s">here</a>
 
-You can also view my git repo: [https://github.com/ChristinaXT/BabyGuide]
+You can also view my git repo: <a href="https://github.com/ChristinaXT/BabyGuide">here</a>
 
 
