@@ -6,43 +6,45 @@ permalink:  rails_and_javascript_review_and_portfolio_project
 ---
 
 
-At first, I was quite intimidated by Javascript. I was just getting really comfortable with Rails, and then JS came to dance and I wasn't sure if I liked the steps. 
+At first, I was quite intimidated by Javascript. I was just getting really comfortable with Rails, and then JS came to dance and I wasn't sure if I liked the steps.  <br>
 <a href="https://imgur.com/PVN6SOd"><img src="https://i.imgur.com/PVN6SOd.jpg" title="source: imgur.com" /></a>
 
-However, after a few tutorials and reviewing the labs for second time, I felt comfortable to start working on the Rails/JS portfolio project. This project expands on the the previous rails portfolio project but with added dynamic features using Javascript and JSON. 
+However, after a few tutorials and reviewing the labs for second time, I felt comfortable to start working on the **Rails/JS portfolio project**. This project expands on the the previous rails portfolio project but with added dynamic features using Javascript and JSON. 
 
-The first step I took was to duplicate my rails app repository. I chose this instead of adding a new branch. I wanted to be able to have two separate repositories.  To duplicate the repository, I followed the method to mirror a repository as listed on [ https://help.github.com/articles/duplicating-a-repository/ ](http://)GitHub Help
-First, I created a new repository (github help) [https://help.github.com/en/articles/creating-a-new-repository](http://) for the new Rails-JS app. I kept the same name I had for my rails project, which is BabyGuide, but added JS so the new project name is BabyGuide_JS. 
+The first step I took was to duplicate my rails app repository. I chose this instead of adding a new branch. I wanted to be able to have two separate repositories.  To duplicate the repository, I followed the method to mirror a repository as listed on [ https://help.github.com/articles/duplicating-a-repository/ ](http://)**GitHub Help**<br><br>
 
-The next step I followed was to create a bare clone of the original rails app repository by typing in terminal without the paranthesis: 
-( git clone --bare [https://github.com/yourusername/existing-rails-repository.git)](http://)
-( cd existing-rails-repository.git)
-( git push --mirror [https://github.com/yourusername/new-repository-js.git)](http://)
+<a href="https://imgur.com/aZLFnVH"><img src="https://i.imgur.com/aZLFnVH.jpg" title="source: imgur.com" /></a>
+First, I created a new repository **(github help)** [https://help.github.com/en/articles/creating-a-new-repository](http://) for the new Rails-JS app. I kept the same name I had for my rails project, which is **BabyGuide**, but added JS so the new project name is **BabyGuide_JS**. 
 
-This mirror push copyied and pasted everything in the rails app repo into the new rails - JS repo. 
+The next step I followed was to create a bare clone of the original rails app repository by typing in terminal without the paranthesis: <br>
+( git clone --bare [https://github.com/yourusername/existing-rails-repository.git)](http://) <br>
+( cd existing-rails-repository.git) <br>
+( git push --mirror [https://github.com/yourusername/new-repository-js.git)](http://) <br><br>
 
-Finish up by typing in terminal (no paranthesis) 
-( cd ..)
-( rm -rf existing-rails-repository.git)
+This mirror push copyied and pasted everything in the rails app repo into the new rails - JS repo. <br><br>
 
-After this, I cloned the new repo I created 
-( git clone git@github.com:yourusername/new-repository_js.git)
-( cd new-repository_js) 
+Finish up by typing in terminal (no paranthesis) <br>
+( cd ..) <br>
+( rm -rf existing-rails-repository.git) <br><br>
 
-And we are ready to start new project :) 
-<a href="https://imgur.com/5id2aJa"><img src="https://i.imgur.com/5id2aJa.jpg" title="source: imgur.com" /></a>
+After this, I cloned the new repo I created : <br>
+( git clone git@github.com:yourusername/new-repository_js.git) <br>
+( cd new-repository_js) <br><br>
+
+And we are ready to start new project :) <br>
+<a href="https://imgur.com/5id2aJa"><img src="https://i.imgur.com/5id2aJa.jpg" title="source: imgur.com" /></a> <br>
 
 Next, I added jquery-rails and active_model_serializers to the Gemfile. 
 
-**jquery-rails:** provides access to jQuery, a Javascript Library that simplifies DOM manipulation and AJAX requests, and the jQuery UJS adapter, enables JavaScript functionality for browsers that support it without negatively impacting browsers that don’t.
+**jquery-rails:** provides access to jQuery, a Javascript Library that simplifies DOM manipulation and AJAX requests, and the jQuery UJS adapter, enables JavaScript functionality for browsers that support it without negatively impacting browsers that don’t. 
 
 **active_model_serializers:** provides a Rails-y way to facilitate converting models into JSON by specifying attributes and relationships that should be present in the JSON version of your data.
 
 In the Gemfile, I added active_model_serializers and gem ‘jquery-rails’ and then did a bundle install
 
-( gem ‘jquery-rails’ )
-( gem ‘active_model_serializers’ )
-( bundle install )
+( gem ‘jquery-rails’ ) <br>
+( gem ‘active_model_serializers’ )<br>
+( bundle install )<br>
 
 <a href="https://imgur.com/YcF1V4b"><img src="https://i.imgur.com/YcF1V4b.jpg" title="source: imgur.com" /></a>
 
@@ -86,24 +88,25 @@ I used the Active Model Serializers using generator - eg,
 your_model_serializer_rb should look something like : <br>
 
 	class YourModelSerializer < ActiveModel::Serializer 
-			 attributes :id
+		 attributes :id
 	end
 		
 You can then remove and add the other attributes as you need, for example `attributes :id, :title, :body, :name`
 		
-	**Next Step -	Render JSON **
+**Next Step -	Render JSON **
+
 	
 In the controller:
 
 	
 ```
 def index
-			 @posts = Post.all
-				respond_to do |format|
-							 format.html
-							 format.json {render json: @posts}
-			 end 
- end 
+  @posts = Post.all
+		  respond_to do |format|
+			  format.html
+				format.json {render json: @posts}
+	 end 
+end 
 ```
 
 			
@@ -133,7 +136,7 @@ class ChecklistsController < ApplicationController
           @checklist = Checklist.new(checklist_params)
                 if @checklist.save
                    render json: @checklist
-                  #redirect_to user_checklist_path(current_user, @checklist)
+                 #redirect_to user_checklist_path(current_user, @checklist)
         else
                   flash[:notice] = "Your checklist creation was unsuccessful"
                   render 'new'
@@ -166,7 +169,7 @@ class ChecklistsController < ApplicationController
       def destroy
           checklist = Checklist.find_by(id: params[:id])
           checklist.destroy
-					redirect_to user_path(current_user)
+			redirect_to user_path(current_user)
       end
 
 
@@ -192,11 +195,11 @@ class ChecklistsController < ApplicationController
 
 When I started the javascript coding, I have to admit, I was bit frightened and felt limited with what I was comfortable with generating from my own brain.  However, Dalia, the wonderful javascript coach provided with me with these three videos for reference and tutorial help.  They pretty much saved my project. The videos are extremely helpful, easy to follow and are faithful to the labs we have done previously in the curriculum. 
 
-* [https://www.youtube.com/watch?v=oHPM0ekV7zQ](http://) (javascript console help)
+* [https://www.youtube.com/watch?v=oHPM0ekV7zQ](http://)**(javascript console help)**
 * 
-* [https://www.youtube.com/watch?v=Yd0nH9CWWfo&amp=&feature=youtu.be](http://) (project tutorial one)
+* [https://www.youtube.com/watch?v=Yd0nH9CWWfo&amp=&feature=youtu.be](http://) **(project tutorial one)**
 * 
-* [https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts](http://) (project tutorial two)
+* [https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts](http://) **(project tutorial two)**
 
 I followed along on the tutorial videos and checked my work on the javascript console with the help of the first video. These videos were invaluable in helping me to complete my javascript along with reviewing the previous labs. Then I was able to work through each of the errors I had in the javascript console by clicking through, which highlighted each one. 
 
