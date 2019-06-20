@@ -11,7 +11,7 @@ At first, I was quite intimidated by Javascript. I was just getting really comfo
 
 However, after a few tutorials and reviewing the labs for second time, I felt comfortable to start working on the Rails/JS portfolio project. This project expands on the the previous rails portfolio project but with added dynamic features using Javascript and JSON. 
 
-The first step I took was to duplicate my rails app repository. I chose this instead of adding a new branch. I wanted to be able to have two separate repositories.  To duplicate the repository, I followed the method to mirror a repository as listed on GitHub Help https://help.github.com/articles/duplicating-a-repository/.
+The first step I took was to duplicate my rails app repository. I chose this instead of adding a new branch. I wanted to be able to have two separate repositories.  To duplicate the repository, I followed the method to mirror a repository as listed on  <a href="https://help.github.com/articles/duplicating-a-repository/" GitHub Help</a>
 First, I created a new repository (github help) https://help.github.com/en/articles/creating-a-new-repository for the new Rails-JS app. I kept the same name I had for my rails project, which is BabyGuide, but added JS so the new project name is BabyGuide_JS. 
 
 The next step I followed was to create a bare clone of the original rails app repository by typing in terminal without the paranthesis: 
