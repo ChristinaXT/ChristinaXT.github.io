@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails and Javascript Review and Portfolio Project"
-date:       2019-06-20 13:46:41 +0000
+date:       2019-06-20 09:46:42 -0400
 permalink:  rails_and_javascript_review_and_portfolio_project
 ---
 
@@ -300,6 +300,10 @@ Checklist.prototype.newChecklistForm = function() {
 Well, it goes to show that we got this ......
 
 <a href="https://imgur.com/CQhm6s3"><img src="https://i.imgur.com/CQhm6s3.jpg" title="source: imgur.com" /></a>
+
+
+Git Repo 
+https://github.com/ChristinaXT/BabyGuide_JS
 
 
 
