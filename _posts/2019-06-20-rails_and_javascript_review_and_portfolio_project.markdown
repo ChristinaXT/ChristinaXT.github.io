@@ -101,12 +101,13 @@ In the controller:
 	
 ```
 def index
-  @posts = Post.all
-		  respond_to do |format|
-			  format.html
-				format.json {render json: @posts}
-	 end 
-end 
+    @checklists = Checklist.all
+    respond_to do |f|
+      f.html { render :index }
+      f.json { render json: @checklists}
+    end
+end
+
 ```
 
 			
