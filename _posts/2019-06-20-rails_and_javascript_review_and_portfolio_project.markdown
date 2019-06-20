@@ -11,13 +11,13 @@ At first, I was quite intimidated by Javascript. I was just getting really comfo
 
 However, after a few tutorials and reviewing the labs for second time, I felt comfortable to start working on the Rails/JS portfolio project. This project expands on the the previous rails portfolio project but with added dynamic features using Javascript and JSON. 
 
-The first step I took was to duplicate my rails app repository. I chose this instead of adding a new branch. I wanted to be able to have two separate repositories.  To duplicate the repository, I followed the method to mirror a repository as listed on  [<a href="https://help.github.com/articles/duplicating-a-repository/" GitHub Help</a>](http://)
-First, I created a new repository (github help) https://help.github.com/en/articles/creating-a-new-repository for the new Rails-JS app. I kept the same name I had for my rails project, which is BabyGuide, but added JS so the new project name is BabyGuide_JS. 
+The first step I took was to duplicate my rails app repository. I chose this instead of adding a new branch. I wanted to be able to have two separate repositories.  To duplicate the repository, I followed the method to mirror a repository as listed on [ https://help.github.com/articles/duplicating-a-repository/ ](http://)GitHub Help
+First, I created a new repository (github help) [https://help.github.com/en/articles/creating-a-new-repository](http://) for the new Rails-JS app. I kept the same name I had for my rails project, which is BabyGuide, but added JS so the new project name is BabyGuide_JS. 
 
 The next step I followed was to create a bare clone of the original rails app repository by typing in terminal without the paranthesis: 
-( git clone --bare https://github.com/yourusername/existing-rails-repository.git)
+( git clone --bare [https://github.com/yourusername/existing-rails-repository.git)](http://)
 ( cd existing-rails-repository.git)
-( git push --mirror https://github.com/yourusername/new-repository-js.git)
+( git push --mirror [https://github.com/yourusername/new-repository-js.git)](http://)
 
 This mirror push copyied and pasted everything in the rails app repo into the new rails - JS repo. 
 
@@ -44,6 +44,8 @@ In the Gemfile, I added active_model_serializers and gem ‘jquery-rails’ and 
 ( gem ‘active_model_serializers’ )
 ( bundle install )
 
+<a href="https://imgur.com/YcF1V4b"><img src="https://i.imgur.com/YcF1V4b.jpg" title="source: imgur.com" /></a>
+
 **Next step was to Add jquery and jquery_ujs to your Asset Pipeline**
 Rails optimizes the use of **Javascript** and **CSS** through the **asset pipeline**. According to **RailsGuides**, The three main features of the pipeline are:
 
@@ -56,20 +58,20 @@ Rails optimizes the use of **Javascript** and **CSS** through the **asset pipeli
 
 `application.js` is a manifest file–a file that tells the Asset Pipeline which files it should include when it makes the minified, concatenated JS file to send to your browser.
 
-This works through “directives”, a functionality enabled by the Sprockets gem, the gem that powers the asset pipeline. The syntax for a directive is:
+This works through “directives”, a functionality enabled by the Sprockets gem, the gem that powers the asset pipeline. The syntax for a directive is: <br>
 
 
-`//= require your_js_file`
+`//= require your_js_file` <br>
 
 (This is where all JS requirements, including libraries (such as jQuery) and your own JavaScript files, should be listed.)
 
 I added these:
 
-`//= require jquery`
-`//= require jquery_ujs `
-`//= require_tree .`
+`//= require jquery` <br>
+`//= require jquery_ujs ` <br>
+`//= require_tree .`  <br>
 
-See the Rails Guide on the  Pipeline https://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directivesAsset to learn about how to add files from other directories to your application.js manifest.
+See the Rails Guide on the  Pipeline [https://guides.rubyonrails.org/asset_pipeline.html#manifest-files-and-directivesAsset](http://) to learn about how to add files from other directories to your application.js manifest.
 
 
 We are getting there ... with the set up...
@@ -79,35 +81,39 @@ We are getting there ... with the set up...
 
 I used the Active Model Serializers using generator - eg, 
 
-`rails g serializer your_model`
+`rails g serializer your_model` <br>
 
-your_model_serializer_rb should look something like :
+your_model_serializer_rb should look something like : <br>
 
-```class YourModelSerializer < ActiveModel::Serializer
-         attributes :id
-    end```
+	class YourModelSerializer < ActiveModel::Serializer 
+			 attributes :id
+	end
 		
-		You can then remove and add the other attributes as you need, for example `attributes :id, :title, :body, :name`
+You can then remove and add the other attributes as you need, for example `attributes :id, :title, :body, :name`
 		
 	**Next Step -	Render JSON **
 	
-	In the controller:
+In the controller:
+
 	
-	```def index
-         @posts = Post.all
-          respond_to do |format|
-                 format.html
-                 format.json {render json: @posts}
-         end 
-       end ```
-			 
+```
+def index
+			 @posts = Post.all
+				respond_to do |format|
+							 format.html
+							 format.json {render json: @posts}
+			 end 
+ end 
+```
+
 			
 
 **JSON** is short for **JavaScript Object Notation**
 
 from my project :
 
-```class ChecklistsController < ApplicationController
+```
+class ChecklistsController < ApplicationController
          before_action :authorized_to_edit?, only: [:edit, :update]
          before_action :set_checklists, only: [:show, :edit, :update, :destroy]
 
@@ -176,7 +182,8 @@ from my project :
               :user_id
              )
           end
-       end ```
+    end 
+```
 
 **jQuery** is a **Document Object Model (DOM)** manipulation library. The DOM is a tree-structure representation of all the elements of a Web page. jQuery simplifies the syntax for finding, selecting, and manipulating these DOM elements.
 
@@ -185,17 +192,18 @@ from my project :
 
 When I started the javascript coding, I have to admit, I was bit frightened and felt limited with what I was comfortable with generating from my own brain.  However, Dalia, the wonderful javascript coach provided with me with these three videos for reference and tutorial help.  They pretty much saved my project. The videos are extremely helpful, easy to follow and are faithful to the labs we have done previously in the curriculum. 
 
-* https://www.youtube.com/watch?v=oHPM0ekV7zQ (javascript console help)
+* [https://www.youtube.com/watch?v=oHPM0ekV7zQ](http://) (javascript console help)
 * 
-* https://www.youtube.com/watch?v=Yd0nH9CWWfo&amp=&feature=youtu.be (project tutorial one)
+* [https://www.youtube.com/watch?v=Yd0nH9CWWfo&amp=&feature=youtu.be](http://) (project tutorial one)
 * 
-* https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts (project tutorial two)
+* [https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts](http://) (project tutorial two)
 
 I followed along on the tutorial videos and checked my work on the javascript console with the help of the first video. These videos were invaluable in helping me to complete my javascript along with reviewing the previous labs. Then I was able to work through each of the errors I had in the javascript console by clicking through, which highlighted each one. 
 
 Here is my checklist.js :
 
-```$(document).ready(() => {
+```
+$(document).ready(() => {
   alert("Loaded")
   indexChecklists()
   showChecklist()
@@ -287,7 +295,8 @@ Checklist.prototype.newChecklistForm = function() {
        `
    return checklistHtml
 
-}```
+}
+```
 
 
 <a href="https://imgur.com/G6efNpA"><img src="https://i.imgur.com/G6efNpA.png" title="source: imgur.com" /></a>
@@ -303,7 +312,7 @@ Well, it goes to show that we got this ......
 
 
 Git Repo 
-https://github.com/ChristinaXT/BabyGuide_JS
+[https://github.com/ChristinaXT/BabyGuide_JS](http://)
 
 
 
