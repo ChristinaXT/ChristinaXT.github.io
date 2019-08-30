@@ -196,7 +196,7 @@ class ChecklistsController < ApplicationController
 
 When I started the javascript coding, I have to admit, I was bit frightened and felt limited with what I was comfortable with generating from my own brain.  However, Dalia, the wonderful javascript coach provided with me with these three videos for reference and tutorial help.  They pretty much saved my project. The videos are extremely helpful, easy to follow and are faithful to the labs we have done previously in the curriculum. 
 
-* [https://www.youtube.com/watch?v=oHPM0ekV7zQ](http://)**(javascript console help)**
+* [https://developers.google.com/web/tools/chrome-devtools/javascript/](http://)**(javascript console help)**
 * 
 * [https://www.youtube.com/watch?v=Yd0nH9CWWfo&amp=&feature=youtu.be](http://) **(project tutorial one)**
 * 
