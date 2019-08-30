@@ -200,7 +200,7 @@ When I started the javascript coding, I have to admit, I was bit frightened and 
 * 
 * [https://www.youtube.com/watch?v=Yd0nH9CWWfo&amp=&feature=youtu.be](http://) **(project tutorial one)**
 * 
-* [https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts](http://) **(project tutorial two)**
+* [https://www.youtube.com/watch?v=oHPM0ekV7zQ](http://) **(project tutorial two)**
 
 I followed along on the tutorial videos and checked my work on the javascript console with the help of the first video. These videos were invaluable in helping me to complete my javascript along with reviewing the previous labs. Then I was able to work through each of the errors I had in the javascript console by clicking through, which highlighted each one. 
 
