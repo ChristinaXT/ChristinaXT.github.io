@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "javascript sort method and some other bonuses"
-date:       2019-09-27 21:43:11 +0000
+date:       2019-09-27 17:43:12 -0400
 permalink:  javascript_sort_method_and_some_other_bonuses
 ---
 
@@ -34,7 +34,7 @@ The purpose of the **Sort Method** is to sort the elements in your array and the
  The next lines :
 ```
 .then(resp => {
-       `` resp.json()``
+        resp.json()
       .then(checklists => {`
 
 ```
