@@ -1,0 +1,91 @@
+Write a blog about JavaScript. Specifically, imagine you want to tell a beginner JS developer about scope and hoisting, and how ES6 syntaxes affect behavior regarding these concepts. Give an overview of these topics with some examples. The blog does not need to be really long. It should be a good tool for someone starting to write JS, a reference that introduces scope and hoisting such that a reader has a good initial understanding. Here are some questions the blog should answer:
+- What is "hoisting" in JS?
+- What is "scope" in JS?
+- How do ES6 syntaxes such as `let` and `const` affect hoisting and scope, compared to `var`?
+------------------------------------------------------------------------------------------------
+
+                             ***Scope and Hoisting in Javascript***
+                             ______________________________________
+                             
+                When I think of hoisting, I think of a sling shot, pulling back the rubberband, releasing and "hoisting" our declaration to the top. Javascript is read from top to bottom and for this reason, defining something before it is invoked makes sense.
+                Hoisting and Scope go hand in hand, as do our ES6 syntaxes "let" and "const" and we can compare them to the previously used "var".
+                
+                There are two rules that can help prevent worries about hoisting. 1) Always declare your functions at the top of the scope. 
+                2) Only use the syntaxes "let" and "const" and never "var". 
+                
+                If you want to have functions declared in the global scope, then declare them at the top of your JavaSript file. If you want to have function scope apply, then declare at the top of the function.
+                
+                What is scope exactly? Think of scope how it sounds. The scope is the stretch or the body of whatever you are talking about is applied to.
+                Global scope applies to the entire world of your JavaScript file. Function scope applies to only that function. Since a function has a closure, it creates a scope of its own. 
+                
+                The "let" and "const" syntaxes allow you to give value to a variable that is limited only to that "block" - and this is block scope. The scope of the block is within the area of an if statement, for example. Usually, if you see curly braces, it is a block. 
+  
+               Think of "let" as flimsy, wishywashy - it can change. 
+               
+               Think of "const" as a constant = permanent - loyal - cannot be changed. 
+               
+               
+               Keyword |   	Scope	 |     Hoisting	 |  Can Be Reassigned	 | Can Be Redeclared
+                ______________________________________________________________________________
+                  var	   Function scope	    Yes	            Yes                 	Yes
+                  ____________________________________________________________________________
+                  let	    Block scope	       No	            Yes                  	No
+                  ____________________________________________________________________________
+                  const	  Block scope	       No	            No	                  No
+                  
+                Examples : 
+                
+                Block example : 
+                
+              `  let x = Yellow;
+                 let y = Yellow;
+
+                 if (true) {
+                   let x = Blue;
+                   let y = Blue;
+                 }
+
+                console.log(x);
+                // expected output: Blue
+
+                console.log(y);
+                // expected output: Yellow `
+                ----------------------------
+                
+                We do not use Var any more because when variables declared with var are not block scope, but let and const are.
+                
+                Global scope Example: Variables inside the Global scope can be accessed and altered in any other scope.
+                
+                var name = 'LIZZY';
+
+                console.log(name); // logs 'LIZZY'
+
+                function logName() {
+                     console.log(name); // 'name' is accessible here and everywhere else
+                  }
+
+                logName(); // logs 'LIZZY'
+                
+                -------------------------
+                
+                Function scope example:
+                
+                (function() {  
+                   thePup();  //BowWow
+                   return;
+                   function thePup() {
+                     console.log("BowWoW");
+                  }
+               })();
+                ---------------------
+                
+                Scope and Hoisting are not scary ideas, but quite literal. When you understand them, Javascript makes more sense and don't forget, coding is an adventure!
+                Happy coding!
+                
+                
+              
+                
+                
+            
+                
+                
