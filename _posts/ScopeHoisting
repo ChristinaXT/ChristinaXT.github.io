@@ -37,19 +37,26 @@ Write a blog about JavaScript. Specifically, imagine you want to tell a beginner
                 
                 Block example : 
                 
-              `  let x = Yellow;
-                 let y = Yellow;
-
-                 if (true) {
-                   let x = Blue;
-                   let y = Blue;
+                function foo(){
+                    if (true) {
+                      var x = 'blue';      //exist in function scope
+                      const y = 'green';   //exist in block scope
+                      let z = 'purple';    //exist in block scope
                  }
 
                 console.log(x);
-                // expected output: Blue
-
                 console.log(y);
-                // expected output: Yellow `
+                console.log(z);
+                
+                foo();
+                 // result:
+                 // blue
+                 // error: y is not defined
+                 // error: z is not defined 
+                
+                
+                
+                
                 ----------------------------
                 
                 We do not use Var any more because when variables declared with var are not block scope, but let and const are.
@@ -58,19 +65,19 @@ Write a blog about JavaScript. Specifically, imagine you want to tell a beginner
                 
                 var name = 'LIZZY';
 
-                console.log(name); // logs 'LIZZY'
+                console.log(name); // LIZZY
 
-                function logName() {
-                     console.log(name); // 'name' is accessible here and everywhere else
+                function getName(){
+                     console.log(name); // name is accessible here and everywhere else
                   }
 
-                logName(); // logs 'LIZZY'
+                getName(); //LIZZY
                 
                 -------------------------
                 
                 Function scope example:
                 
-                (function() {  
+                 function(){  
                    thePup();  //BowWow
                    return;
                    function thePup() {
@@ -79,7 +86,56 @@ Write a blog about JavaScript. Specifically, imagine you want to tell a beginner
                })();
                 ---------------------
                 
-                Scope and Hoisting are not scary ideas, but quite literal. When you understand them, Javascript makes more sense and don't forget, coding is an adventure!
+                Hoisting ---
+                
+                look at this example: 
+                
+                yellBoom();
+                
+                function yellBoom(){
+                    console.log('Boom!');
+                }
+                
+                This will print 'Boom!' even though the function is defined after it is used because Javascript is smart 
+                and looks for variable and function declarations before they are actually declared 
+                
+                look at this example:
+                ----------------------
+                
+                phelan = 'Little Wolf';
+                console.log(phelan); //Little Wolf
+                var phelan;
+                
+                -----------------------
+                
+                The variable phelan still will work even though it is declared after it is used because the code is being 
+                processed and the function and variable declarations are detected. The code acts as if these declarations were made at 
+                the top of the code. 
+                
+                However :
+      
+                
+                var phelan = 'Little Wolf';
+                
+                var is only declaring phelan 
+                
+                ='Little Wolf'; means that the previously declared phelan is assigned a value of 'Little Wolf' and is an initialization.
+                
+                Only declarations will be hoisted;  therefore, you can access the variable phelan 
+                before it is declared but the value of 'Little Wolf' will be undefined. 
+                
+                ------------------------------
+                
+                console.log(phelan); //undefined
+                var phelan = 'Little Wolf';
+                console.log(phelan); //'Little Wolf'
+       
+                ------------------------
+                
+                
+                Scope and Hoisting are not scary ideas after you learn the basic rules and meanings of var, let and const and what they can do. 
+                
+                
                 Happy coding!
                 
                 
